@@ -8,22 +8,21 @@ from detection_helpers import decode_predictions
 import numpy as np
 import argparse
 import cv2
+import imutils
 
 # Argumen Parser
 # Contoh cara menjalankan kode
-# python kjaga-detection.py --image nasi-tempe.jpg --size "(250, 250)"
+# python kjaga-detection.py --image nasi-tempe.jpg
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to the input image")
-ap.add_argument("-s", "--size", type=str, default="(200, 150)",
-	help="ROI size (in pixels)")
 args = vars(ap.parse_args())
 
 # Nilai konstanta
 WIDTH = 600
 PYR_SCALE = 1.5
 WIN_STEP = 16
-ROI_SIZE = eval(args["size"])
+ROI_SIZE = "(250, 250)"
 INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
@@ -32,6 +31,7 @@ model = load_model("./modelv1-4.h5", custom_objects={'KerasLayer':hub.KerasLayer
 
 # Load gambar dan mendapatkan dimensinya
 original_image = cv2.imread(args["image"])
+original_image = imutils.resize(original_image, width=WIDTH)
 (H, W) = original_image.shape[:2]
 
 # Melakukan inisialisasi image pyramid generator
@@ -54,12 +54,10 @@ for image in pyramid:
 		roi = cv2.resize(roiOrig, INPUT_SIZE)
 		roi = img_to_array(roi)
 		roi = preprocess_input(roi)
-		print(roi)
 		rois.append(roi)
 		locations.append((x, y, x + w, y + h))
 
 rois = np.array(rois, dtype="float32")
-
 # Melakukan prediksi dan mapping label
 # sesuai dengan nilai prediksi
 preds = model.predict(rois)
@@ -69,7 +67,7 @@ preds = decode_predictions(preds)
 # dengan nilai probabilitas > 85%
 labels = set()
 for (label, prob) in preds:
-	if prob >= 0.85:
+	if prob >= 0.87:
 		labels.add(label)
 
 print(labels)
