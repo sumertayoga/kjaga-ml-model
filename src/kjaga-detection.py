@@ -22,7 +22,7 @@ args = vars(ap.parse_args())
 WIDTH = 600
 PYR_SCALE = 1.5
 WIN_STEP = 16
-ROI_SIZE = "(250, 250)"
+ROI_SIZE = (250, 250)
 INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
