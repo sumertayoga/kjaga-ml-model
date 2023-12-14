@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "label": "Ayam Bakar"
+    },
+    {
+        "id": 1,
+        "label": "Ayam Goreng"
+    },
+    {
+        "id": 2,
+        "label": "Ayam Krispi"
+    },
+    {
+        "id": 3,
+        "label": "Ayam Pop"
+    },
+    {
+        "id": 4,
+        "label": "Bakso"
+    },
+    {
+        "id": 5,
+        "label": "Nasi Goreng"
+    },
+    {
+        "id": 6,
+        "label": "Nasi Merah"
+    },
+    {
+        "id": 7,
+        "label": "Nasi Putih"
+    },
+    {
+        "id": 8,
+        "label": "Tahu Goreng"
+    },
+        {
+        "id": 9,
+        "label": "Tempe Goreng"
+    }
+]
