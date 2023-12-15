@@ -1,4 +1,5 @@
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+import time
+from tensorflow.keras.applications.mobilenet_v3 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 import tensorflow_hub as hub
@@ -27,7 +28,7 @@ INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
 print("[INFO] Loading model...")
-model = load_model("./modelv1-4.h5", custom_objects={'KerasLayer':hub.KerasLayer})
+model = load_model("./modelv1-5.h5", custom_objects={'KerasLayer':hub.KerasLayer})
 
 # Load gambar dan mendapatkan dimensinya
 original_image = cv2.imread(args["image"])
@@ -54,6 +55,7 @@ for image in pyramid:
 		roi = cv2.resize(roiOrig, INPUT_SIZE)
 		roi = img_to_array(roi)
 		roi = preprocess_input(roi)
+		roi = roi/255.
 		rois.append(roi)
 		locations.append((x, y, x + w, y + h))
 
@@ -67,7 +69,7 @@ preds = decode_predictions(preds)
 # dengan nilai probabilitas > 85%
 labels = set()
 for (label, prob) in preds:
-	if prob >= 0.87:
+	if prob >= 0.85:
 		labels.add(label)
 
 print(labels)
