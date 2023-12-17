@@ -20,18 +20,19 @@ ap.add_argument("-i", "--image", required=True,
 args = vars(ap.parse_args())
 
 # Nilai konstanta
-WIDTH = 600
+WIDTH = 900
 PYR_SCALE = 1.5
-WIN_STEP = 16
+WIN_STEP = 24
 ROI_SIZE = (250, 250)
 INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
 print("[INFO] Loading model...")
-model = load_model("./modelv1-5.h5", custom_objects={'KerasLayer':hub.KerasLayer})
+model = load_model("./modelv1-5.h5")
 
 # Load gambar dan mendapatkan dimensinya
 original_image = cv2.imread(args["image"])
+original_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
 original_image = imutils.resize(original_image, width=WIDTH)
 (H, W) = original_image.shape[:2]
 
@@ -68,8 +69,9 @@ preds = decode_predictions(preds)
 # Membuat set dan menambahkan nilai label
 # dengan nilai probabilitas > 85%
 labels = set()
-for (label, prob) in preds:
-	if prob >= 0.85:
+for (i, p) in enumerate(preds):
+	(label, prob) = p
+	if prob >= 0.95:
 		labels.add(label)
 
 print(labels)
