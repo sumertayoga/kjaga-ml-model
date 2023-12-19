@@ -28,7 +28,7 @@ INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
 print("[INFO] Loading model...")
-model = load_model("./modelv1-5.h5")
+model = load_model("./modelv1-12.h5")
 
 # Load gambar dan mendapatkan dimensinya
 original_image = cv2.imread(args["image"])
@@ -66,12 +66,13 @@ rois = np.array(rois, dtype="float32")
 preds = model.predict(rois)
 preds = decode_predictions(preds)
 
+
 # Membuat set dan menambahkan nilai label
 # dengan nilai probabilitas > 85%
 labels = set()
 for (i, p) in enumerate(preds):
 	(label, prob) = p
-	if prob >= 0.95:
+	if prob >= 0.9:
 		labels.add(label)
 
 print(labels)

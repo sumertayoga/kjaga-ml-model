@@ -1,42 +1,94 @@
 [
     {
         "id": 0,
-        "label": "Ayam Bakar"
+        "label": "Apel"
     },
     {
         "id": 1,
-        "label": "Ayam Goreng"
+        "label": "Ayam Bakar"
     },
     {
         "id": 2,
-        "label": "Ayam Krispi"
+        "label": "Ayam Goreng"
     },
     {
         "id": 3,
-        "label": "Ayam Pop"
+        "label": "Ayam Krispi"
     },
     {
         "id": 4,
-        "label": "Bakso"
+        "label": "Ayam Pop"
     },
     {
         "id": 5,
-        "label": "Nasi Goreng"
+        "label": "Bakso"
     },
     {
         "id": 6,
-        "label": "Nasi Merah"
+        "label": "Donat"
     },
     {
         "id": 7,
+        "label": "Ikan"
+    },
+        {
+        "id": 8,
+        "label": "Jeruk"
+    },
+    {
+        "id": 9,
+        "label": "Mentimun"
+    },
+    {
+        "id": 10,
+        "label": "Mie"
+    },
+    {
+        "id": 11,
+        "label": "Nasi Goreng"
+    },
+    {
+        "id": 12,
+        "label": "Nasi Merah"
+    },
+    {
+        "id": 13,
         "label": "Nasi Putih"
     },
     {
-        "id": 8,
+        "id": 14,
+        "label": "Pisang"
+    },
+    {
+        "id": 15,
+        "label": "Rambutan"
+    },
+    {
+        "id": 16,
+        "label": "Sate"
+    },
+    {
+        "id": 17,
+        "label": "Selada"
+    },
+    {
+        "id": 18,
+        "label": "Sosis"
+    },
+    {
+        "id": 19,
         "label": "Tahu Goreng"
     },
-        {
-        "id": 9,
+    {
+        "id": 20,
         "label": "Tempe Goreng"
+    },
+    {
+        "id": 21,
+        "label": "Tomat"
+    },
+    {
+        "id": 22,
+        "label": "Udang"
     }
 ]
