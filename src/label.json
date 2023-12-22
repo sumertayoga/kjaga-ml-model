@@ -1,94 +1,24 @@
 [
-    {
-        "id": 0,
-        "label": "Apel"
-    },
-    {
-        "id": 1,
-        "label": "Ayam Bakar"
-    },
-    {
-        "id": 2,
-        "label": "Ayam Goreng"
-    },
-    {
-        "id": 3,
-        "label": "Ayam Krispi"
-    },
-    {
-        "id": 4,
-        "label": "Ayam Pop"
-    },
-    {
-        "id": 5,
-        "label": "Bakso"
-    },
-    {
-        "id": 6,
-        "label": "Donat"
-    },
-    {
-        "id": 7,
-        "label": "Ikan"
-    },
-        {
-        "id": 8,
-        "label": "Jeruk"
-    },
-    {
-        "id": 9,
-        "label": "Mentimun"
-    },
-    {
-        "id": 10,
-        "label": "Mie"
-    },
-    {
-        "id": 11,
-        "label": "Nasi Goreng"
-    },
-    {
-        "id": 12,
-        "label": "Nasi Merah"
-    },
-    {
-        "id": 13,
-        "label": "Nasi Putih"
-    },
-    {
-        "id": 14,
-        "label": "Pisang"
-    },
-    {
-        "id": 15,
-        "label": "Rambutan"
-    },
-    {
-        "id": 16,
-        "label": "Sate"
-    },
-    {
-        "id": 17,
-        "label": "Selada"
-    },
-    {
-        "id": 18,
-        "label": "Sosis"
-    },
-    {
-        "id": 19,
-        "label": "Tahu Goreng"
-    },
-    {
-        "id": 20,
-        "label": "Tempe Goreng"
-    },
-    {
-        "id": 21,
-        "label": "Tomat"
-    },
-    {
-        "id": 22,
-        "label": "Udang"
-    }
+    {"id": 0, "label": "Ayam Bakar"},
+    {"id": 1, "label": "Ayam Goreng"},
+    {"id": 2, "label": "Ayam Krispi"},
+    {"id": 3, "label": "Bakso"},
+    {"id": 4, "label": "Ikan Goreng"},
+    {"id": 5, "label": "Kentang Goreng"},
+    {"id": 6, "label": "Kerupuk Putih"},
+    {"id": 7, "label": "Mentimun"},
+    {"id": 8, "label": "Mie"},
+    {"id": 9, "label": "Naget Ayam"},
+    {"id": 10, "label": "Nasi Goreng"},
+    {"id": 11, "label": "Nasi Merah"},
+    {"id": 12, "label": "Nasi Putih"},
+    {"id": 13, "label": "Sate Ayam"},
+    {"id": 14, "label": "Sosis Ayam"},
+    {"id": 15, "label": "Tahu Goreng"},
+    {"id": 16, "label": "Telur Ceplok"},
+    {"id": 17, "label": "Telur Dadar"},
+    {"id": 18, "label": "Telur Rebus"},
+    {"id": 19, "label": "Tempe Goreng"},
+    {"id": 20, "label": "Tomat"},
+    {"id": 21, "label": "Udang"}
 ]

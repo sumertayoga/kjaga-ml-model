@@ -28,7 +28,7 @@ INPUT_SIZE = (224, 224)
 
 # Load model yang telah dibuat
 print("[INFO] Loading model...")
-model = load_model("./modelv1-12.h5")
+model = load_model("./modelv1-16.h5")
 
 # Load gambar dan mendapatkan dimensinya
 original_image = cv2.imread(args["image"])
@@ -72,7 +72,7 @@ preds = decode_predictions(preds)
 labels = set()
 for (i, p) in enumerate(preds):
 	(label, prob) = p
-	if prob >= 0.9:
+	if prob >= 0.96:
 		labels.add(label)
 
 print(labels)
